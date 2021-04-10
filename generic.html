@@ -67,14 +67,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 								<hr />
 
-								<h4>thoughts that came across</h4>
-								<p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. 
-								Donec varius ex in mauris ornare, eget euismod urna egestas. 
-								Etiam lacinia tempor ipsum, sodales porttitor justo. 
-								Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. 
-								Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+								<h4>Thoughts that came across</h4>
+								<p>.</p>
 
-								<p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+								<p>.</p>
 
 							</div>
 						</section>
@@ -83,19 +79,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 								<h3>API Implementation</h3>
 								<p>When it comes to setting up an API it's important to think of who should get which information out of it and wich data should not be shared? How can I make sure the API is performing technically in the best way? How can I control the traffic running through?
-								Is this a customised solution or more standardized? The endpoint is the URL you provided and my data layer is supposed to send its values there. So I am going to set this up using the Google Tag Manager API. </p>
+								Is this a customised solution or more standardized? The endpoint is the URL you provided and my data layer is supposed to send its values there. So I am going to set this up using the Google Tag Manager API. 
+								Everything is pretty well documented n their site, so I am trying wo work my wy through this.</p>
 								<ul class="actions special">
 								<li><a href="#" class="button primary">GET API</a></li>
 								</ul>
 								
-								<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+								<p> I think I found the right code for it, but somehow the parameters I wanted to try for this API have been invalid:
+									
+								<script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for tagmanager.accounts.containers.workspaces.variables.create
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/guides/code_samples#javascript
+   */
+
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/tagmanager.edit.containers"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("YOUR_API_KEY");
+    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/tagmanager/v2/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.tagmanager.accounts.containers.workspaces.variables.create({
+      "parent": "/accounts/6003648348/containers/43417808/workspaces/",
+      "resource": {
+        "name": "",
+        "type": ""
+      }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+  });
+</script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
+									.</p>
 
 								<hr />
 
-								<h4>Feugiat aliquam</h4>
-								<p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+								<h4>Thoughts that came across</h4>
+								<p>.</p>
 
-								<p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+								<p>.</p>
 
 							</div>
 						</section>
@@ -104,9 +144,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="inner">
 
 								<h3>Javascript tag implementation</h3>
-								<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+								<p>.</p>
 
-								<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+								<p>.</p>
 
 								<hr />
 
