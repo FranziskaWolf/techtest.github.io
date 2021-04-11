@@ -61,19 +61,36 @@
 							<div class="inner">
 
 								<h3>Javascript tag implementation</h3>
-								<iframe height="260" width="280" src="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[U
-SER_AGENT]&cmp=[YOURNAME]&fmt=banner&rt=display&sl=1&fq=1"> 
-  <a href="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[U
-SER_AGENT]&cmp=[YOURNAME]&fmt=banner&rt=display&sl=1&fq=1">
+								<iframe height="260" width="280" src="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[USER_AGENT]&cmp=[YOURNAME]&fmt=banner&rt=display&sl=1&fq=1"> 
+  <a href="http://c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p=[REFERRER]&a=[USER_AGENT]&cmp=[YOURNAME]&fmt=banner&rt=display&sl=1&fq=1">
+	 <html>
+	<head>
+	  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KW3Z3QV');</script>
+<!-- End Google Tag Manager -->
+	  </head>
+	  <body>
+	  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3Z3QV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	  </body>
 									<p>I have chosen the 300x250 format as an IAB standardized format.</p>
 <p><span class="image left"><img src="images/adspace.jpg" alt="" /></span></p></a> 
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+	</html>										<div class="col-12"><span class="image fit"><img src="images/adspace.jpg" alt="" /></span></div>
 </iframe> 
 								
 								<hr />
 
 								<h4>failed network calls or JS errors and attempts to troubleshoot them</h4>
 							
-								<p>.</p>
+								<p>In general it is important to have access to the HTML page in order to track it through GTM. The first thing I did was setting up my picture in the iframe. That worked well. But also fire the JS tag turned out to be more complicated. So I started setting up the requested Variables in my tag manager. "p" as a Referrer, "a" as a custom Javascript and "cmp" as a variable. I think the plan is now to send the information, once the ad unite within the iframe is loading, to my "parent page". Therefor I could set up a second GTM to insert another tag to this iframe. </p>
 
 							</div>
 						</section>
