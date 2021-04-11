@@ -52,14 +52,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>The following points will show you how I got here</h2>
-							<p>I will get deeper into detail what have been the challenges for me</p>
+							<h2>This site will provide (hopefully) everything that came up while solving the tech test</h2>
+							
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<h3>GTM</h3>
-								<p>After watching tones of Youtube tutorials I have been able
+								<h3>GTM and data layer</h3>
+								<p>After watching tones of Youtube tutorials and documentations from Google I have been able
 								to set up the GTM on that site. Using the Tag Assistant Legacy for Chrome I have been able to check that it works.
 									First step has been done. So now we can come to the tricky part. Using GTM I am able to create different variables, tags and trigger to add values coming from the webiste to data layer. 
 									So the following variables need to be set up: eventAction, eventCategory, eventLabel, eventValue, transactionTotal. After that I needed to set up the Tag and trigger. Final step is creating an HTML-tag for the Data Layer Push.
@@ -70,8 +70,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<h4>Thoughts that came across</h4>
 								<section>
 								<p>The problem now is that I can't really submit any "real" information. So I tried to show you what I supposed to happen. Therefor I chose an example using Books. Every part of the table is a key: bookAuthor, bookTitle and bookPrice. Every key has different values like "war and peace" or "pride and prejudice". I sat up those variables like mentioned above in my Google Tag Manager. Afterwards I used a script including "dataLayer.push()" to transfer the given information to the data layer.</p>
-									<h4>Table</h4>
-									<h5>Bookshop</h5>
+									<h4>This is my cart at the bookshop</h4>
+									
 									<div class="table-wrapper">
 										<table>
 											<thead>
@@ -83,8 +83,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</thead>
 											<tbody>
 												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>J.R.R. Tolkien</td>
+													<td>Lord of the rings</td>
 													<td>29.99</td>
 													<td><div class="col-4 col-12-small">
 												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
@@ -95,8 +95,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<label for="demo-priority-normal">No thanks!</label></td>
 												</tr>
 												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>Jane Austen</td>
+													<td>Pride and prejudice</td>
 													<td>19.99</td>
 													<td><div class="col-4 col-12-small">
 												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
@@ -107,8 +107,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<label for="demo-priority-normal">No thanks!</label></td>
 												</tr>
 												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>Lew Nikolajewitsch Tolstoi</td>
+													<td>war and peace</td>
 													<td>29.99</td>
 													<td><div class="col-4 col-12-small">
 												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
@@ -119,8 +119,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<label for="demo-priority-normal">No thanks!</label></td>
 												</tr>
 												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
+													<td>F. Scott Fitzgerald</td>
+													<td>The great Gatsby</td>
 													<td>19.99</td>
 													<td><div class="col-4 col-12-small">
 												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
@@ -131,8 +131,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<label for="demo-priority-normal">No thanks!</label></td>
 												</tr>
 												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>Georg Orwell</td>
+													<td>1984</td>
 													<td>29.99</td>
 													<td><div class="col-4 col-12-small">
 												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
