@@ -69,7 +69,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 								<h4>Challenges</h4>
 								<section>
-								<p>The problem now is that I can't really submit any "real" information. So I tried to show you what I supposed to happen. Therefor I chose an example using Books. Every part of the table is a key: bookAuthor, bookTitle and bookPrice. Every key has different values like "war and peace" or "pride and prejudice". I sat up those variables like mentioned above in my Google Tag Manager. Afterwards I used a script including "dataLayer.push()" to transfer the given information to the data layer.</p>
+								<p>The problem now is that I can't really submit any "real" information. So I tried to show you what I supposed to happen. Therefor I chose an example using Books. Every part of the table is a key: bookAuthor, bookTitle and bookPrice. Every key has different values like "war and peace" or "pride and prejudice". I sat up those variables like mentioned above in my Google Tag Manager. Afterwards I used a script including "dataLayer.push()" to transfer the given information to the data layer.
+									
+									<p><script></br>
+window.dataLayer = window.dataLayer || [];</br>
+dataLayer.push({</br>
+ 'transactionProducts': [{</br>
+   'bookAuthor': 'J.R.R. Tolkien',</br>
+   'bookTitle': 'Lord of the rings',</br>
+   'bookPrice': 29.99,</br>
+   'quantity': 1</br>
+ },{</br>
+   'bookAuthor': 'Jane Austen',</br>
+   'bookTitle': 'Pride and prejudice',</br>
+   'bookPrice': 19.99,</br>
+   'quantity': 2</br>
+ }]</br>
+});</br>
+</script></p></br>
 									<h4>This is my cart at the bookshop</h4>
 									
 									<div class="table-wrapper">
