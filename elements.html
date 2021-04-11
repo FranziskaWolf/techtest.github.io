@@ -49,8 +49,7 @@
 							</div>
 						</section>
 					</article>
-<section class="wrapper style5">
-							<div class="inner">
+
 
 								<h4>Javascript tag implementation</h4>
 								<section> <p>I have chosen the 300x250 format as an IAB standardized format.</p> </section>
@@ -85,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 								<h4>failed network calls or JS errors and attempts to troubleshoot them</h4>
 							
-								<p>In general it is important to have access to the HTML page in order to track it through GTM. The first thing I did was setting up my picture in the iframe. That worked well. But also fire the JS tag turned out to be more complicated. So I started setting up the requested Variables in my tag manager. "p" as a Referrer, "a" as a custom Javascript and "cmp" as a variable. I think the plan is now to send the information, once the ad unite within the iframe is loading, to my "parent page". Therefor I could set up a second GTM to insert another tag to this iframe. </p>
+								<p>In general it is important to have access to the HTML page in order to track it through GTM. The first thing I did was setting up my picture in the iframe. That worked well. But also fire the JS tag turned out to be more complicated. So I started setting up the requested Variables in my tag manager. "p" as a Referrer, "a" as a custom Javascript and "cmp" as a variable. I think the plan is now to send the information, once the ad unite within the iframe is loading, to my "parent page". Therefor I could set up a second GTM to insert another tag to this iframe. This way we can send data from an inner ifram eto the parent frame and then forward that on to Analytics.</p>
 
 							</div>
 						</section>
