@@ -96,7 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<h4>failed network calls or JS errors and attempts to troubleshoot them</h4>
 							
 								<p>I have been really struggeling with this part. In general it is important to have access to the HTML page that is supposed to be called in the iframe in order to track it through GTM. The first thing I did was setting up my picture in the iframe. That worked well. But also fire the JS tag turned out to be more complicated. So I started setting up the requested variables in my tag manager. "p" as a Referrer, "a" as a custom Javascript and "cmp" as a variable. I think the plan is now to send the information to my "parent page", once the ad unit is loading. Therefor I tried to set up a second tag to insert to this iframe. This way we can send data from an inner iframe to the parent frame and then forward that on to Analytics.
-								Similar to the challenges I had setting up the API implementation, I am now struggeling with this part to call the page within the iframe.</p>
+								Similar to the challenges I had setting up the API implementation, I am now struggeling with this part to call the JS tag correctly within the iframe.</p>
 
 							</div>
 						</section>
