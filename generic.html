@@ -184,14 +184,17 @@ dataLayer.push({</br>
 							<div class="inner">
 
 								<h3>API Implementation</h3>
-								<p>When it comes to setting up an API it's important to think of what kind of information should be shared and who is supposed to get it? How can I make sure the API is performing technically in the best way? How can I control the traffic running through?
-								Is this a customised solution or more standardized? The endpoint is the URL you provided and my data layer is supposed to send its values there. So I am going to set this up using the Google Tag Manager API. 
-								Everything is pretty well documented n their site, so I am trying wo work my wy through this.</p>
+								<p>When it comes to setting up an API it's important to think of different requirements like: what kind of information should be shared and who is supposed to get it? How can I make sure the API is performing technically in the best way? How can I control the traffic running through and how much traffic will actually be expected?
+								Is this a customised solution or more standardized and is there maybe a documentation for it, provided by the client? </br>
+								The endpoint is the URL you provided and my data layer is supposed to send its values there.
+								I think its a a GET script like this: "GET /my-api/my-resource/{name}".</br>
+								Google Tag Manager provides API solutions ("apis.google.com/js/api"). And although everything is pretty well documented on their site, I haven't been able to set it up right. </p>
 								<ul class="actions special">
 								<li><a href="#" class="button primary">GET API</a></li>
 								</ul>
 								
-								<p> I think I found the right code for it, but somehow the parameters I wanted to try for this API have been invalid:
+								<p> I found that script, that looked pretty good to me. But it's still missing the source, where to get the data from.
+									
 									
 								<script src="https://apis.google.com/js/api.js"></script>
 {</p>
@@ -208,12 +211,12 @@ dataLayer.push({</br>
   "origin": "95.90.246.81",</br>
   "url": "http://httpbin.org/get"</br>
 }</br>
-									.</p>
+									</p>
 
 								<hr />
 
 								<h4>Challenges</h4>
-								<p>That is the point I would ask a developer for help. Before that I of course should get all the information I mentioned above: what kind of API should be used? What are the relevant infomation to provide and in what formatß Is JSON fine?.</p>
+								<p>At this point I would ask a developer for help. Before that I of course should get all the information I mentioned above: what kind of API should be used? What are the relevant infomation to provide and in what formate?.</p>
 
 								
 
@@ -222,7 +225,7 @@ dataLayer.push({</br>
 					</article>
 			<section class="wrapper style5">
 							<div class="inner">
-
+<hr />
 								<h3>Javascript tag implementation</h3>
 								<p>This part is available on the next side. Just switch to "Elements" in the menu.</p>
 
@@ -233,7 +236,7 @@ dataLayer.push({</br>
 					</article>
 		<section class="wrapper style5">
 							<div class="inner">
-
+<hr />
 								<h3>Flow Architecture Diagram</h3>
 									
 											<div class="col-12"><span class="image fit"><img src="images/screen.jpg" alt="" /></span></div>
